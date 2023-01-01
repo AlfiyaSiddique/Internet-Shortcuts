@@ -15,5 +15,4 @@ This application can store up to 100 website url for a user. User can Add and De
 <li>MYSQL DATABASE</li>
 </ul>
 
-## ⚡️ Live
-  [Check it live](https://urlshortener.alfiyasiddique.repl.co)
+⚡️[Check it out here](https://urlshortener.alfiyasiddique.repl.co)
