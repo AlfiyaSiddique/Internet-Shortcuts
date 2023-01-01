@@ -1,0 +1,29 @@
+<%- include("header") %>
+
+<body>
+    <div class="container halfgrid">
+        <div>
+            <h1 class="name">Wee  <img class="logo" src="logo.png"></h1>
+
+            <h2 class="tagline">
+                Converting URL's for you to reach right destinations in the world of web
+            </h2>
+            <p class="subline">Shorten upto 100 urls's</p>    
+        </div>
+        
+        <div class="sec_div">
+            <h1 class="form_head">Log In</h1>
+          <div> <%= message %></div> 
+            <form action="/login" method="post">
+               <input type="email" placeholder="Email" name="email">
+               <input type="password" placeholder="Password" name="password">
+           
+               <button class="btn" type="submit">Log In</button>
+               <p><a href="/signup">Create New Account</a></p>
+            </form>
+        </div>
+    </div>
+   
+   
+</body>
+</html>

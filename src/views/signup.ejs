@@ -1,0 +1,27 @@
+<%- include("header") %>
+<body id="signupbody">
+    <div class="container" id="signup">
+        <div class="sec_div">
+            <div> <img class="logo" src="logo.png"></div>
+            <h1  class="form_head">Sign Up</h1>
+                   
+           <% if(errors != " "){ %>
+             <%   errors.forEach((item)=>{ %>
+                    <div class="alert alert-danger">
+                    <%-    item %>
+                    </div>
+               <% }) %>
+           <% } %>
+
+            <form action="/signup" method="post">
+                <input type="text" placeholder="Create Username" name="name">
+               <input type="email" placeholder="Email" name="email">
+               <input type="password" placeholder="Password" name="password">
+                <input type="password" placeholder="Confirm Password" name="cpassword">
+               <button class="btn" type="submit">Sign Up</button>
+                 <p>Already Have an account: <a href="/">Log In</a></p>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

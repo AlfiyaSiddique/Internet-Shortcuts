@@ -1,0 +1,34 @@
+{
+  "name": "11.url-shortener",
+  "version": "1.0.0",
+  "description": "URL Shortner shorts URL",
+  "main": "index.js", 
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon --exec babel-node index.js"
+  },
+  "author": "Alfiya Siddique",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "body-parser": "^1.20.1",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "express-validator": "^6.14.2",
+    "mysql2": "^2.3.3",
+    "nodemon": "^2.0.20",
+    "passport": "^0.6.0",
+    "passport-local": "^1.0.0",
+    "src": "^1.1.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0"
+  }
+}

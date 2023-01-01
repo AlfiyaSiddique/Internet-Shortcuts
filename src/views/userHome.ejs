@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="responsive2.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>User</title>
+</head>
+
+<body>
+
+    <div id="upbar">
+        <h2>
+            <%= name %>
+        </h2>
+        <div>
+            <label for="range"><%= data.length %> URL's</label>
+            <input id="rangebar" type="range" min="0" max="100" value="<%= data.length %>" disabled>
+        </div>
+
+      <div>
+        <a href="/logout">Log Out</a>
+        <a href="/deleteUser">Delete Account</a>
+      </div>
+        
+    </div>
+
+    <div>
+        <div class="mainbar">
+            <% data.forEach(website=>{ %>
+                <div class="card">
+                    <i class="fa fa-times" onclick="removeURL(`<%=website.dataId%>`)"></i>
+                    <h2>
+                        <%= website.websiteName %>
+                    </h2>
+                    <button class="btn"><a target="_blank" href="/api/shorturl/<%=website.dataId%>">Visit</a></button>
+                </div>
+
+                <% }) %> 
+        </div>
+    </div>
+
+    <div  onclick="adder()" id="plus">+</div>
+
+    <div class="container hidden" id="adder">
+        <i class="fa fa-times" onclick="remover()"></i>
+        <form>
+            <input type="text" placeholder="Website Name" id="websiteName">
+            <input type="text" placeholder="URL" id="url">
+            <button class="btn" onclick="passInfo()">Add</button>
+        </form>
+    </div>
+    <div id="layer" class="hidden"></div>
+    <script src="index.js"></script>
+</body>
+
+</html>

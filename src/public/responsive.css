@@ -1,0 +1,52 @@
+
+@media (max-width: 350px) {
+    .container{
+        padding: 20px;
+    }
+}
+@media (max-width: 500px) {
+    body{
+        margin: 3rem 20px;
+    }
+
+    .container{
+        max-width: 95vw;
+    }
+}
+
+@media  (max-width:800px) {
+    .halfgrid{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        text-align: center;
+    }
+
+    #signup{
+        max-width: 95vw;
+    }
+
+    .tagline{
+        font-size: 1.3rem;
+        padding: 20px;
+    }
+}
+
+@media (min-width: 801px) and  (max-width: 1020px){
+    .tagline{
+        padding: 2rem 2rem 1rem 0;
+        font-size: 1.3rem;
+    }
+}
+
+@media (min-width:1530px) {
+    body{
+        padding-top:10rem ;
+    }
+    .container{
+        max-width: 50vw;
+    }
+
+    #signupbody{
+        padding-top: 10rem;
+    }
+}
